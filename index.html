@@ -1,65 +1,317 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>InsightTrace.Digital — Em breve</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1 style="display:none;">
+Investigação Digital Preventiva e Segurança Online
+</h1>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightTrace.Digital | Prevenção de Golpes e Investigação Digital</title>
+
+  <meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --accent: #2563eb;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #0f172a, #020617);
-      color: #e5e7eb;
+      background: linear-gradient(180deg, #f8fafc, #eef2ff);
+      color: var(--text-main);
+    }
+
+    /* ===== SOCIAL TOPO ===== */
+    .social {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 14px;
+      z-index: 9999;
+    }
+
+    .social a {
+      width: 42px;
+      height: 42px;
+      background: #ffffff;
+      color: var(--accent);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      transition: all 0.25s ease;
+      text-decoration: none;
     }
 
-    .container {
-      max-width: 520px;
-      padding: 40px;
+    .social a:hover {
+      background: var(--accent);
+      color: #ffffff;
+      transform: translateY(-3px);
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      background: linear-gradient(90deg, #38bdf8, #2563eb);
+    /* ===== LOGO ===== */
+    .brand {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .brand-insight {
+      background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    p {
+    .brand-digital {
+      font-size: 0.55em;
+      vertical-align: super;
+      margin-left: 6px;
+      color: var(--accent);
+      font-weight: 700;
+      animation: digitalIn 1.1s ease forwards;
+    }
+
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: auto;
       font-size: 1.1rem;
-      line-height: 1.6;
-      color: #cbd5f5;
+      color: var(--text-soft);
+    }
+
+    .cta {
+      margin-top: 35px;
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .steps {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .alert {
+      background: #ecfeff;
+      border-left: 6px solid var(--accent);
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 790px;
+      margin: auto;
     }
 
     footer {
-      margin-top: 35px;
-      font-size: 0.85rem;
-      color: #94a3b8;
+      background: #e0e7ff;
+      padding: 45px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* ===== SIDEBAR ANÚNCIOS ===== */
+    .ads-sidebar {
+      position: fixed;
+      top: 140px;
+      right: 20px;
+      width: 260px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      z-index: 999;
+    }
+
+    .ads-sidebar h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .ads-sidebar p {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 15px;
+    }
+
+    .ad-box {
+      height: 120px;
+      border: 2px dashed rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .btn-ads {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .btn-ads:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>InsightTrace.Digital</h1>
 
-    <p>
-      Estamos finalizando ajustes importantes.<br>
-      Em breve, o site estará disponível.
-    </p>
+<!-- SIDEBAR
 
-    <footer>
-      © 2026 InsightTrace.Digital — Todos os direitos reservados
-    </footer>
+<!-- SIDEBAR ANÚNCIOS -->
+<aside class="ads-sidebar">
+  <h3>Anuncie aqui</h3>
+  <p>
+    Seu serviço ou produto pode aparecer
+    para pessoas interessadas em
+    <strong>segurança digital e prevenção de golpes</strong>.
+  </p>
+
+  <div class="ad-box">
+    Espaço publicitário
   </div>
+
+  <a href="midia-kit.html" class="btn-ads">
+    Ver Mídia Kit
+  </a>
+</aside>
+
+<header>
+
+  <div class="social">
+    <a href="https://instagram.com/insighttrace.digital" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://facebook.com/insighttrace.digital" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
+
+  <div class="brand">
+    <span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
+  </div>
+
+  <p>
+    Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
+  </p>
+
+  <a class="cta" href="https://wa.me/5517992603717" target="_blank">
+    Falar comigo agora no WhatsApp
+  </a>
+
+</header>
+
+<section>
+  <h2>Em que posso te ajudar</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Perfil falso ou suspeito</h3>
+      <p>Analiso redes sociais e comportamentos estranhos para evitar golpes.</p>
+    </div>
+    <div class="card">
+      <h3>Mensagem estranha</h3>
+      <p>Links, pedidos de dinheiro e histórias urgentes explicadas com clareza.</p>
+    </div>
+    <div class="card">
+      <h3>Uso indevido de imagem</h3>
+      <p>Descubro onde suas fotos estão sendo usadas e organizo provas.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Transparência</h2>
+  <div class="alert">
+    <p>
+      Não invado contas, não acesso mensagens privadas e não realizo atividades ilegais.
+      Todo o trabalho é baseado apenas em informações públicas.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    © 2025 <strong>InsightTrace.Digital</strong><br>
+    Informação protege. Clareza previne.
+  </p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5517992603717" target="_blank">WhatsApp</a>
+
 </body>
 </html>
 
