@@ -30,7 +30,7 @@ body {
   color: var(--text-main);
 }
 
-/* SOCIAL */
+/* ================= SOCIAL ================= */
 .social {
   position: fixed;
   top: 20px;
@@ -51,7 +51,7 @@ body {
   justify-content: center;
   font-size: 1.4rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-  transition: all 0.25s ease;
+  transition: 0.25s;
   text-decoration: none;
 }
 
@@ -61,7 +61,48 @@ body {
   transform: translateY(-3px);
 }
 
-/* LOGO */
+/* ================= ANÚNCIO LATERAL ================= */
+.ads-sidebar {
+  position: fixed;
+  top: 80px; /* agora logo abaixo das redes sociais */
+  right: 20px;
+  width: 260px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  z-index: 999;
+}
+
+.ad-box {
+  height: 120px;
+  border: 2px dashed rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.btn-ads {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.btn-ads:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ================= LOGO ================= */
 .brand {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 800;
@@ -150,47 +191,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* SIDEBAR ANÚNCIOS */
-.ads-sidebar {
-  position: fixed;
-  top: 140px;
-  right: 20px;
-  width: 260px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(0,0,0,0.1);
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  z-index: 999;
-}
-
-.ad-box {
-  height: 120px;
-  border: 2px dashed rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-.btn-ads {
-  display: block;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--accent);
-}
-
-.btn-ads:hover {
-  background: var(--accent);
-  color: #fff;
-}
-
 .whatsapp {
   position: fixed;
   right: 20px;
@@ -203,7 +203,7 @@ footer {
   font-weight: 600;
 }
 
-/* ===== CELULAR (SEM MUDAR CORES OU TAMANHO DO LOGO) ===== */
+/* ================= CELULAR ================= */
 @media (max-width: 768px) {
 
   body {
@@ -215,8 +215,7 @@ footer {
   }
 
   .brand {
-    font-size: clamp(3rem, 6vw, 4.5rem); /* mesmo tamanho do PC */
-    margin-bottom: 10px;
+    font-size: clamp(3rem, 6vw, 4.5rem); /* mesmo tamanho */
   }
 
   header p {
@@ -246,7 +245,7 @@ footer {
   }
 
   .ads-sidebar {
-    display: none; /* remove lateral no celular */
+    display: none; /* esconde no celular */
   }
 }
 </style>
@@ -254,6 +253,17 @@ footer {
 
 <body>
 
+<!-- REDES SOCIAIS -->
+<div class="social">
+<a href="https://instagram.com/insighttrace.digital" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a href="https://facebook.com/insighttrace.digital" target="_blank">
+<i class="fa-brands fa-facebook"></i>
+</a>
+</div>
+
+<!-- ANÚNCIO -->
 <aside class="ads-sidebar" id="adsBox">
 <button onclick="fecharAnuncio()" 
 style="position:absolute; top:8px; right:10px; border:none; background:none; font-size:18px; cursor:pointer;">
@@ -262,9 +272,8 @@ style="position:absolute; top:8px; right:10px; border:none; background:none; fon
 
 <h3>Anuncie aqui</h3>
 <p>
-Seu serviço ou produto pode aparecer
-para pessoas interessadas em
-<strong>segurança digital e prevenção de golpes</strong>.
+Seu serviço pode aparecer para pessoas interessadas em
+<strong>segurança digital</strong>.
 </p>
 
 <div class="ad-box">
@@ -277,15 +286,6 @@ Ver Mídia Kit
 </aside>
 
 <header>
-
-<div class="social">
-<a href="https://instagram.com/insighttrace.digital" target="_blank">
-<i class="fa-brands fa-instagram"></i>
-</a>
-<a href="https://facebook.com/insighttrace.digital" target="_blank">
-<i class="fa-brands fa-facebook"></i>
-</a>
-</div>
 
 <div class="brand">
 <span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
