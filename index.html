@@ -7,18 +7,73 @@
 
 <title>InsightTrace.Digital | Prevenção de Golpes e Investigação Digital</title>
 
+<meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --accent: #2563eb;
+  --bg-main: #f8fafc;
   --bg-card: #ffffff;
+  --accent: #2563eb;
+  --text-main: #0f172a;
+  --text-soft: #475569;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: var(--text-main);
+}
+
+/* ================= LOGO ORIGINAL ================= */
+
+.brand {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.brand-insight {
+  background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-digital {
+  font-size: 0.55em;
+  vertical-align: super;
+  margin-left: 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  padding: 90px 20px 70px;
+  text-align: center;
+}
+
+header p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+.cta {
+  margin-top: 35px;
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.3);
 }
 
 /* ================= BANNERS ================= */
@@ -48,28 +103,19 @@ body {
   transform: scale(1.02);
 }
 
-/* restante do seu estilo mantido */
-
-header {
-  padding: 90px 20px 70px;
-  text-align: center;
-}
-
-.cta {
-  margin-top: 35px;
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  padding: 16px 32px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-}
+/* ================= SECTIONS ================= */
 
 section {
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--accent);
 }
 
 .grid {
@@ -91,6 +137,8 @@ section {
   border-left: 6px solid var(--accent);
   padding: 25px;
   border-radius: 12px;
+  max-width: 790px;
+  margin: auto;
 }
 </style>
 </head>
@@ -98,7 +146,10 @@ section {
 <body>
 
 <header>
-<h1>InsightTrace.Digital</h1>
+
+<div class="brand">
+<span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
+</div>
 
 <p>
 Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
@@ -107,6 +158,7 @@ Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire
 <a class="cta" href="https://wa.me/5517992603717" target="_blank">
 Falar comigo agora no WhatsApp
 </a>
+
 </header>
 
 <!-- 🔥 PRIMEIRO BLOCO DE BANNERS -->
@@ -151,16 +203,12 @@ Não invado contas, não acesso mensagens privadas e não realizo atividades ile
 
 <script>
 
-/* ================= LISTA DE PUBLICIDADES ================= */
-
 const anuncios = [
   { texto: "Anuncie aqui — Espaço 1", link: "midia-kit.html" },
   { texto: "Anuncie aqui — Espaço 2", link: "#" },
   { texto: "Anuncie aqui — Espaço 3", link: "#" },
   { texto: "Anuncie aqui — Espaço 4", link: "#" }
 ];
-
-/* ================= ROTATIVO A CADA 1 HORA ================= */
 
 function atualizarBanners() {
   const base = Math.floor(Date.now() / 3600000);
