@@ -1,167 +1,274 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>InsightTrace Digital | Auditoria e Segurança</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>InsightTrace.Digital | Prevenção de Golpes e Investigação Digital</title>
+
+<meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
-
-/* ================= RESET ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --accent: #2563eb;
+  --text-main: #0f172a;
+  --text-soft: #475569;
 }
 
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg,#0a1f44,#0f2e6d);
-  color:#ffffff;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  color: var(--text-main);
+}
+
+/* ================= LOGO ================= */
+
+.brand {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.brand-insight {
+  background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-digital {
+  font-size: 0.55em;
+  vertical-align: super;
+  margin-left: 6px;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* ================= HEADER ================= */
 
-header{
-  text-align:center;
-  padding:40px 20px;
+header {
+  padding: 90px 20px 70px;
+  text-align: center;
 }
 
-.logo{
-  font-size:2.4rem;
-  font-weight:bold;
-  background: linear-gradient(90deg,#00c6ff,#0072ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+header p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: var(--text-soft);
 }
 
-/* ================= CONTEUDO ================= */
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
+.cta {
+  margin-top: 35px;
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.3);
 }
 
-/* ================= BANNER ROTATIVO (NOVO CSS) ================= */
+/* ================= BANNERS ================= */
 
-.banner-rotativo{
-  max-width:900px;
-  height:130px;
-  margin:60px auto;
-  padding:20px;
-  border-radius:14px;
-  background:#ffffff;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  text-align:center;
-  font-weight:600;
-  font-size:1.1rem;
-  cursor:pointer;
-  transition:0.3s;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#0a1f44;
+.banner-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.banner-rotativo:hover{
-  transform:scale(1.02);
+.banner-rotativo {
+  width: 100%;
+  padding: 20px; /* DIMINUIDO */
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-rotativo:hover {
+  transform: scale(1.02);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 70px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.alert {
+  background: #ecfeff;
+  border-left: 6px solid var(--accent);
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 790px;
+  margin: auto;
 }
 
 /* ================= WHATSAPP ================= */
 
-.whatsapp-fixo{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  z-index:999;
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #25D366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 9999;
 }
 
-.whatsapp-fixo img{
-  width:32px;
-}
+/* ================= CELULAR ================= */
 
-/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
 
-@media(max-width:768px){
+  /* Mantém MESMO fundo e cores */
 
-  .logo{
-    font-size:2rem;
+  .banner-container {
+    grid-template-columns: 1fr;
   }
 
-  .banner-rotativo{
-    max-width:95%;
-    height:115px;
-    font-size:1rem;
+  .banner-rotativo {
+    padding: 18px;
+    font-size: 1rem;
   }
 
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">InsightTrace Digital</div>
-</header>
 
-<div class="container">
-
-  <!-- ================= BANNER 1 ================= -->
-
-  <div class="banner-rotativo" id="banner1">
-    🔐 Proteja sua empresa contra golpes digitais – Anuncie Aqui
-  </div>
-
-  <!-- ================= BANNER 2 ================= -->
-
-  <div class="banner-rotativo" id="banner2">
-    📢 Espaço publicitário disponível – Público segmentado e qualificado
-  </div>
-
+<div class="brand">
+<span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
 </div>
 
-<!-- ================= WHATSAPP ================= -->
+<p>
+Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
+</p>
 
-<a href="https://wa.me/5599999999999" target="_blank" class="whatsapp-fixo">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+<a class="cta" href="https://wa.me/5517992603717" target="_blank">
+Falar comigo agora no WhatsApp
 </a>
 
-<!-- ================= SCRIPT NOVO ================= -->
+</header>
+
+<!-- PRIMEIRO BLOCO -->
+<div class="banner-container">
+  <div class="banner-rotativo" id="banner1a" onclick="abrirLink(0)">Publicidade</div>
+  <div class="banner-rotativo" id="banner1b" onclick="abrirLink(1)">Publicidade</div>
+</div>
+
+<section>
+<h2>Em que posso te ajudar</h2>
+
+<div class="grid">
+<div class="card">
+<h3>Perfil falso ou suspeito</h3>
+<p>Analiso redes sociais e comportamentos estranhos para evitar golpes.</p>
+</div>
+
+<div class="card">
+<h3>Mensagem estranha</h3>
+<p>Links suspeitos explicados com clareza.</p>
+</div>
+
+<div class="card">
+<h3>Uso indevido de imagem</h3>
+<p>Descubro onde suas fotos estão sendo usadas e organizo provas.</p>
+</div>
+</div>
+</section>
+
+<!-- SEGUNDO BLOCO -->
+<div class="banner-container">
+  <div class="banner-rotativo" id="banner2a" onclick="abrirLink(2)">Publicidade</div>
+  <div class="banner-rotativo" id="banner2b" onclick="abrirLink(3)">Publicidade</div>
+</div>
+
+<section>
+<h2>Transparência</h2>
+<div class="alert">
+Não invado contas, não acesso mensagens privadas e não realizo atividades ilegais.
+</div>
+</section>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5517992603717" target="_blank" class="whatsapp-float">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script>
 
-const banners = [
-  "🔐 Proteja sua empresa contra golpes digitais – Anuncie Aqui",
-  "📢 Público qualificado em segurança digital",
-  "⚖️ Escritórios de advocacia podem anunciar aqui",
-  "🛡️ Empresas de monitoramento e antifraude",
-  "💼 Plano Bronze R$150 | Plano Prata R$250 | Plano Ouro R$400"
+const anuncios = [
+  { texto: "Anuncie aqui — Espaço 1", link: "midia-kit.html" },
+  { texto: "Anuncie aqui — Espaço 2", link: "#" },
+  { texto: "Anuncie aqui — Espaço 3", link: "#" },
+  { texto: "Anuncie aqui — Espaço 4", link: "#" }
 ];
 
-let index = 0;
+function atualizarBanners() {
+  const base = Math.floor(Date.now() / 3600000);
 
-function rotacionarBanner(){
-  const banner1 = document.getElementById("banner1");
-  const banner2 = document.getElementById("banner2");
-
-  banner1.innerText = banners[index];
-  banner2.innerText = banners[(index + 1) % banners.length];
-
-  index = (index + 1) % banners.length;
+  document.getElementById("banner1a").innerText = anuncios[(base) % anuncios.length].texto;
+  document.getElementById("banner1b").innerText = anuncios[(base + 1) % anuncios.length].texto;
+  document.getElementById("banner2a").innerText = anuncios[(base + 2) % anuncios.length].texto;
+  document.getElementById("banner2b").innerText = anuncios[(base + 3) % anuncios.length].texto;
 }
 
-setInterval(rotacionarBanner, 4000);
+function abrirLink(indexOffset) {
+  const base = Math.floor(Date.now() / 3600000);
+  const anuncio = anuncios[(base + indexOffset) % anuncios.length];
+  window.open(anuncio.link, "_blank");
+}
+
+atualizarBanners();
 
 </script>
 
