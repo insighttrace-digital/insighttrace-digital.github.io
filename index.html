@@ -64,8 +64,8 @@ body {
 /* ================= ANÚNCIO LATERAL ================= */
 .ads-sidebar {
   position: fixed;
-  top: 80px; /* agora logo abaixo das redes sociais */
-  right: 20px;
+  top: 80px;
+  right: 8px; /* MAIS PARA A DIREITA */
   width: 260px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(0,0,0,0.1);
@@ -205,47 +205,8 @@ footer {
 
 /* ================= CELULAR ================= */
 @media (max-width: 768px) {
-
-  body {
-    background: rgba(248,250,252,0.95);
-  }
-
-  header {
-    padding: 50px 15px 40px;
-  }
-
-  .brand {
-    font-size: clamp(3rem, 6vw, 4.5rem); /* mesmo tamanho */
-  }
-
-  header p {
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-
-  .cta {
-    margin-top: 20px;
-    padding: 14px 24px;
-  }
-
-  section {
-    padding: 45px 15px;
-  }
-
-  h2 {
-    margin-bottom: 30px;
-  }
-
-  .grid {
-    gap: 18px;
-  }
-
-  .card {
-    padding: 22px;
-  }
-
   .ads-sidebar {
-    display: none; /* esconde no celular */
+    display: none;
   }
 }
 </style>
@@ -253,7 +214,6 @@ footer {
 
 <body>
 
-<!-- REDES SOCIAIS -->
 <div class="social">
 <a href="https://instagram.com/insighttrace.digital" target="_blank">
 <i class="fa-brands fa-instagram"></i>
@@ -263,7 +223,6 @@ footer {
 </a>
 </div>
 
-<!-- ANÚNCIO -->
 <aside class="ads-sidebar" id="adsBox">
 <button onclick="fecharAnuncio()" 
 style="position:absolute; top:8px; right:10px; border:none; background:none; font-size:18px; cursor:pointer;">
@@ -286,7 +245,6 @@ Ver Mídia Kit
 </aside>
 
 <header>
-
 <div class="brand">
 <span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
 </div>
@@ -298,7 +256,6 @@ Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire
 <a class="cta" href="https://wa.me/5517992603717" target="_blank">
 Falar comigo agora no WhatsApp
 </a>
-
 </header>
 
 <section>
