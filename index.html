@@ -89,7 +89,7 @@ header p {
 
 .banner-rotativo {
   width: 100%;
-  padding: 20px; /* DIMINUIDO */
+  padding: 20px;
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -133,6 +133,20 @@ h2 {
   text-align: center;
 }
 
+/* ===== ÍCONES SERVIÇOS ===== */
+
+.service-icon {
+  font-size: 36px;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.service-title {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 .alert {
   background: #ecfeff;
   border-left: 6px solid var(--accent);
@@ -162,11 +176,24 @@ h2 {
   z-index: 9999;
 }
 
+/* ================= FOOTER ================= */
+
+footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
 /* ================= CELULAR ================= */
 
 @media (max-width: 768px) {
-
-  /* Mantém MESMO fundo e cores */
 
   .banner-container {
     grid-template-columns: 1fr;
@@ -209,20 +236,25 @@ Falar comigo agora no WhatsApp
 <h2>Em que posso te ajudar</h2>
 
 <div class="grid">
+
 <div class="card">
-<h3>Perfil falso ou suspeito</h3>
+<i class="fa-solid fa-user-secret service-icon"></i>
+<h3 class="service-title">Perfil falso ou suspeito</h3>
 <p>Analiso redes sociais e comportamentos estranhos para evitar golpes.</p>
 </div>
 
 <div class="card">
-<h3>Mensagem estranha</h3>
+<i class="fa-solid fa-envelope-open-text service-icon"></i>
+<h3 class="service-title">Mensagem estranha</h3>
 <p>Links suspeitos explicados com clareza.</p>
 </div>
 
 <div class="card">
-<h3>Uso indevido de imagem</h3>
+<i class="fa-solid fa-image service-icon"></i>
+<h3 class="service-title">Uso indevido de imagem</h3>
 <p>Descubro onde suas fotos estão sendo usadas e organizo provas.</p>
 </div>
+
 </div>
 </section>
 
@@ -239,7 +271,11 @@ Não invado contas, não acesso mensagens privadas e não realizo atividades ile
 </div>
 </section>
 
-<!-- BOTÃO WHATSAPP -->
+<footer>
+  <p>© 2026 InsightTrace.Digital — Todos os direitos reservados.</p>
+  <p>Investigação digital humana, clara e dentro da lei.</p>
+</footer>
+
 <a href="https://wa.me/5517992603717" target="_blank" class="whatsapp-float">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
