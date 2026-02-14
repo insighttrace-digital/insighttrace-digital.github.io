@@ -1,312 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InsightTrace.Digital | Ajuda Rápida e Segura</title>
+  <meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<title>InsightTrace.Digital | Prevenção de Golpes e Investigação Digital</title>
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-<meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
+  <style>
+    :root {
+      --bg-main: #f8fafc;
+      --bg-card: #ffffff;
+      --accent: #2563eb;
+      --text-main: #0f172a;
+      --text-soft: #475569;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    * { box-sizing: border-box; }
 
-<style>
-:root {
-  --bg-main: #f8fafc;
-  --bg-card: #ffffff;
-  --accent: #2563eb;
-  --text-main: #0f172a;
-  --text-soft: #475569;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #f8fafc, #eef2ff);
-  color: var(--text-main);
-}
-
-/* ================= LOGO ================= */
-
-.brand {
-  font-size: clamp(3rem, 6vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 18px;
-}
-
-.brand-insight {
-  background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.brand-digital {
-  font-size: 0.55em;
-  vertical-align: super;
-  margin-left: 6px;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-/* ================= HEADER ================= */
-
-header {
-  padding: 90px 20px 70px;
-  text-align: center;
-}
-
-header p {
-  max-width: 720px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: var(--text-soft);
-}
-
-.cta {
-  margin-top: 35px;
-  display: inline-block;
-  background: var(--accent);
-  color: #fff;
-  padding: 16px 32px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 10px 25px rgba(37,99,235,0.3);
-}
-
-/* ================= BANNERS ================= */
-
-.banner-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.banner-rotativo {
-  width: 100%;
-  padding: 20px;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.05rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.banner-rotativo:hover {
-  transform: scale(1.02);
-}
-
-/* ================= SECTIONS ================= */
-
-section {
-  padding: 70px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-  color: var(--accent);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-.card {
-  background: var(--bg-card);
-  padding: 32px;
-  border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-/* ===== ÍCONES SERVIÇOS ===== */
-
-.service-icon {
-  font-size: 36px;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-.service-title {
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.alert {
-  background: #ecfeff;
-  border-left: 6px solid var(--accent);
-  padding: 25px;
-  border-radius: 12px;
-  max-width: 790px;
-  margin: auto;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp-float {
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #f8fafc, #eef2ff);
+      color: var(--text-main);
+    }
+/* ÍCONES SOCIAIS - TOPO DIREITO FIXO */
+.social {
   position: fixed;
+  top: 20px;
   right: 20px;
-  bottom: 20px;
-  background: #25D366;
-  color: #fff;
-  width: 55px;
-  height: 55px;
+  display: flex;
+  gap: 14px;
+  z-index: 9999;
+}
+
+.social a {
+  width: 42px;
+  height: 42px;
+  background: #ffffff;
+  color: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 26px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-size: 1.4rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: all 0.25s ease;
   text-decoration: none;
-  z-index: 9999;
 }
 
-/* ================= FOOTER ================= */
-
-footer {
-  background: #0f172a;
-  color: #cbd5e1;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
+.social a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  transform: translateY(-3px);
 }
 
-footer p {
-  margin: 5px 0;
-  font-size: 0.9rem;
-}
+    /* ===== LOGOTIPO CSS EXCLUSIVO ===== */
+    .brand {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
 
-/* ================= CELULAR ================= */
+    .brand-insight {
+      background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-@media (max-width: 768px) {
+    .brand-digital {
+      font-size: 0.55em;
+      vertical-align: super;
+      margin-left: 6px;
+      color: var(--accent);
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: digitalIn 1.1s ease forwards;
+      animation-delay: .4s;
+    }
 
-  .banner-container {
-    grid-template-columns: 1fr;
-  }
+    @keyframes digitalIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-  .banner-rotativo {
-    padding: 18px;
-    font-size: 1rem;
-  }
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+    }
 
-}
-</style>
+    header p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: var(--text-soft);
+    }
+
+    .cta {
+      margin-top: 35px;
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+    }
+
+    /* SOCIAL ICONS */
+    .social {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .social a {
+      color: var(--accent);
+      font-size: 1.6rem;
+      transition: transform .2s ease, color .2s ease;
+    }
+
+    .social a:hover {
+      color: #1e40af;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 50px;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 { color: var(--accent); }
+    .card p { color: var(--text-soft); }
+
+    .steps {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    .steps li { margin-bottom: 18px; }
+
+    .alert {
+      background: #ecfeff;
+      border-left: 6px solid var(--accent);
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 790px;
+      margin: auto;
+    }
+
+    footer {
+      background: #e0e7ff;
+      padding: 45px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+
+    footer strong {
+      color: var(--accent);
+    }
+
+    .copyright {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
 
-<div class="brand">
-<span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
+<div class="social">
+  <a href="https://instagram.com/insighttrace.digital" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com/insighttrace.digital" target="_blank" aria-label="Facebook">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
 </div>
 
-<p>
-Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
-</p>
+  <div class="brand">
+    <span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
+  </div>
 
-<a class="cta" href="https://wa.me/5517992603717" target="_blank">
-Falar comigo agora no WhatsApp
-</a>
+  <p>
+    Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
+  </p>
 
+  <a class="cta" href="https://wa.me/5517992603717" target="_blank">
+    Falar comigo agora no WhatsApp </a>
+  
 </header>
-
-<!-- PRIMEIRO BLOCO -->
-<div class="banner-container">
-  <div class="banner-rotativo" id="banner1a" onclick="abrirLink(0)">Publicidade</div>
-  <div class="banner-rotativo" id="banner1b" onclick="abrirLink(1)">Publicidade</div>
-</div>
-
 <section>
-<h2>Em que posso te ajudar</h2>
-
-<div class="grid">
-
-<div class="card">
-<i class="fa-solid fa-user-secret service-icon"></i>
-<h3 class="service-title">Perfil falso ou suspeito</h3>
-<p>Analiso redes sociais e comportamentos estranhos para evitar golpes.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-envelope-open-text service-icon"></i>
-<h3 class="service-title">Mensagem estranha</h3>
-<p>Links suspeitos explicados com clareza.</p>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-image service-icon"></i>
-<h3 class="service-title">Uso indevido de imagem</h3>
-<p>Descubro onde suas fotos estão sendo usadas e organizo provas.</p>
-</div>
-
-</div>
+  <h2>Em que posso te ajudar</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Perfil falso">
+      <h3>Perfil falso ou suspeito</h3>
+      <p>Analiso redes sociais e comportamentos estranhos para você não cair em golpe emocional.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Mensagem suspeita">
+      <h3>Mensagem estranha</h3>
+      <p>Links, pedidos de dinheiro e histórias urgentes. Eu te explico se é golpe ou não.</p>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Uso indevido de imagem">
+      <h3>Uso indevido de imagem</h3>
+      <p>Descubro onde suas fotos estão sendo usadas e organizo provas para denúncia.</p>
+    </div>
+  </div>
 </section>
 
-<!-- SEGUNDO BLOCO -->
-<div class="banner-container">
-  <div class="banner-rotativo" id="banner2a" onclick="abrirLink(2)">Publicidade</div>
-  <div class="banner-rotativo" id="banner2b" onclick="abrirLink(3)">Publicidade</div>
-</div>
+<section>
+  <h2>Como funciona (bem simples)</h2>
+  <ul class="steps">
+    <li>📩 Você me conta a situação e envia prints ou links</li>
+    <li>🔍 Analiso apenas informações públicas (100% legal)</li>
+    <li>🧠 Cruzo dados e explico tudo em linguagem simples</li>
+    <li>✅ Você decide o que fazer com mais segurança</li>
+  </ul>
+</section>
 
 <section>
-<h2>Transparência</h2>
-<div class="alert">
-Não invado contas, não acesso mensagens privadas e não realizo atividades ilegais.
-</div>
+  <h2>Transparência</h2>
+  <div class="alert">
+     <p><strong>Aviso importante:</strong></p> 
+             <p>Não invado contas, não acesso mensagens privadas e não faço nada ilegal. Todo o trabalho é baseado apenas em informações públicas, com foco em prevenção e orientação.</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 InsightTrace.Digital — Todos os direitos reservados.</p>
-  <p>Investigação digital humana, clara e dentro da lei.</p>
+  <p>
+    © 2025 <strong>InsightTrace.Digital</strong><br>
+    Informação protege. Clareza previne.
+  </p>
+  <div class="copyright">
+    Todos os direitos reservados.
+  </div>
 </footer>
 
-<a href="https://wa.me/5517992603717" target="_blank" class="whatsapp-float">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<script>
-
-const anuncios = [
-  { texto: "Anuncie aqui — Espaço 1", link: "midia-kit.html" },
-  { texto: "Anuncie aqui — Espaço 2", link: "#" },
-  { texto: "Anuncie aqui — Espaço 3", link: "#" },
-  { texto: "Anuncie aqui — Espaço 4", link: "#" }
-];
-
-function atualizarBanners() {
-  const base = Math.floor(Date.now() / 3600000);
-
-  document.getElementById("banner1a").innerText = anuncios[(base) % anuncios.length].texto;
-  document.getElementById("banner1b").innerText = anuncios[(base + 1) % anuncios.length].texto;
-  document.getElementById("banner2a").innerText = anuncios[(base + 2) % anuncios.length].texto;
-  document.getElementById("banner2b").innerText = anuncios[(base + 3) % anuncios.length].texto;
-}
-
-function abrirLink(indexOffset) {
-  const base = Math.floor(Date.now() / 3600000);
-  const anuncio = anuncios[(base + indexOffset) % anuncios.length];
-  window.open(anuncio.link, "_blank");
-}
-
-atualizarBanners();
-
-</script>
+<a class="whatsapp" href="https://wa.me/5517992603717" target="_blank">WhatsApp</a>
 
 </body>
 </html>
