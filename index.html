@@ -21,12 +21,19 @@ body {
   background: linear-gradient(180deg, #f8fafc, #eef2ff);
 }
 
-/* ================= BANNER ROTATIVO ================= */
+/* ================= BANNERS ================= */
 
-.banner-rotativo {
+.banner-container {
   max-width: 1100px;
   margin: 40px auto;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.banner-rotativo {
+  width: 100%;
+  padding: 30px;
   border-radius: 14px;
   background: #ffffff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -42,6 +49,7 @@ body {
 }
 
 /* restante do seu estilo mantido */
+
 header {
   padding: 90px 20px 70px;
   text-align: center;
@@ -101,9 +109,10 @@ Falar comigo agora no WhatsApp
 </a>
 </header>
 
-<!-- 🔥 PRIMEIRO BANNER -->
-<div class="banner-rotativo" id="banner1" onclick="abrirLink(1)">
-Publicidade
+<!-- 🔥 PRIMEIRO BLOCO DE BANNERS -->
+<div class="banner-container">
+  <div class="banner-rotativo" id="banner1a" onclick="abrirLink(0)">Publicidade</div>
+  <div class="banner-rotativo" id="banner1b" onclick="abrirLink(1)">Publicidade</div>
 </div>
 
 <section>
@@ -127,9 +136,10 @@ Publicidade
 </div>
 </section>
 
-<!-- 🔥 SEGUNDO BANNER -->
-<div class="banner-rotativo" id="banner2" onclick="abrirLink(2)">
-Publicidade
+<!-- 🔥 SEGUNDO BLOCO DE BANNERS -->
+<div class="banner-container">
+  <div class="banner-rotativo" id="banner2a" onclick="abrirLink(2)">Publicidade</div>
+  <div class="banner-rotativo" id="banner2b" onclick="abrirLink(3)">Publicidade</div>
 </div>
 
 <section>
@@ -144,34 +154,30 @@ Não invado contas, não acesso mensagens privadas e não realizo atividades ile
 /* ================= LISTA DE PUBLICIDADES ================= */
 
 const anuncios = [
-  {
-    texto: "Anuncie aqui — Espaço disponível",
-    link: "midia-kit.html"
-  },
-  {
-    texto: "Empresa de Segurança Digital — Clique e conheça",
-    link: "#"
-  },
-  {
-    texto: "Advocacia Especializada em Crimes Virtuais",
-    link: "#"
-  }
+  { texto: "Anuncie aqui — Espaço 1", link: "midia-kit.html" },
+  { texto: "Anuncie aqui — Espaço 2", link: "#" },
+  { texto: "Anuncie aqui — Espaço 3", link: "#" },
+  { texto: "Anuncie aqui — Espaço 4", link: "#" }
 ];
 
 /* ================= ROTATIVO A CADA 1 HORA ================= */
 
-function atualizarBanner(id) {
-  const indice = Math.floor(Date.now() / 3600000) % anuncios.length;
-  document.getElementById("banner" + id).innerText = anuncios[indice].texto;
+function atualizarBanners() {
+  const base = Math.floor(Date.now() / 3600000);
+
+  document.getElementById("banner1a").innerText = anuncios[(base) % anuncios.length].texto;
+  document.getElementById("banner1b").innerText = anuncios[(base + 1) % anuncios.length].texto;
+  document.getElementById("banner2a").innerText = anuncios[(base + 2) % anuncios.length].texto;
+  document.getElementById("banner2b").innerText = anuncios[(base + 3) % anuncios.length].texto;
 }
 
-function abrirLink(id) {
-  const indice = Math.floor(Date.now() / 3600000) % anuncios.length;
-  window.open(anuncios[indice].link, "_blank");
+function abrirLink(indexOffset) {
+  const base = Math.floor(Date.now() / 3600000);
+  const anuncio = anuncios[(base + indexOffset) % anuncios.length];
+  window.open(anuncio.link, "_blank");
 }
 
-atualizarBanner(1);
-atualizarBanner(2);
+atualizarBanners();
 
 </script>
 
