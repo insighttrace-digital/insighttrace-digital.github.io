@@ -1,17 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>InsightTrace.Digital | Ajuda Rápida e Segura</title>
+  <title>InsightTrace.Digital | Golpes Online</title>
   <meta name="google-site-verification" content="knUkmP_cllwI5gUJivEPfn-eQcgux6obbHghA9fZGdY" />
-  <meta name="description" content="InsightTrace.Digital ajuda você a entender situações suspeitas na internet antes que vire prejuízo. Investigação digital humana, clara e legal." />
+  <meta name="description" content="InsightTrace.Digital ajuda você a entender golpes online antes que virem prejuízo." />
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
@@ -56,64 +53,9 @@
       color: var(--accent);
     }
 
-    /* ÍCONES SOCIAIS - TOPO DIREITO FIXO */
-    .social {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      gap: 14px;
-      z-index: 9999;
-    }
-
-    .social a {
-      width: 42px;
-      height: 42px;
-      background: #ffffff;
+    /* LINK ATIVO (SEM TRAÇO) */
+    nav a.active {
       color: var(--accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-      transition: all 0.25s ease;
-      text-decoration: none;
-    }
-
-    .social a:hover {
-      background: var(--accent);
-      color: #ffffff;
-      transform: translateY(-3px);
-    }
-
-    .brand {
-      font-size: clamp(3rem, 6vw, 4.5rem);
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-    }
-
-    .brand-insight {
-      background: linear-gradient(90deg, #0f172a, #2563eb, #38bdf8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .brand-digital {
-      font-size: 0.55em;
-      vertical-align: super;
-      margin-left: 6px;
-      color: var(--accent);
-      font-weight: 700;
-      opacity: 0;
-      transform: translateY(12px);
-      animation: digitalIn 1.1s ease forwards;
-      animation-delay: .4s;
-    }
-
-    @keyframes digitalIn {
-      to { opacity: 1; transform: translateY(0); }
     }
 
     header {
@@ -235,65 +177,35 @@
 
 <header>
 
-<div class="social">
-  <a href="https://instagram.com/insighttrace.digital" target="_blank" aria-label="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a href="https://facebook.com/insighttrace.digital" target="_blank" aria-label="Facebook">
-    <i class="fa-brands fa-facebook"></i>
-  </a>
+<div class="brand" style="font-size:2.5rem;font-weight:800;margin-bottom:15px;">
+  Golpes Online
 </div>
 
-  <div class="brand">
-    <span class="brand-insight">InsightTrace</span><span class="brand-digital">.Digital</span>
-  </div>
+<p>
+  Entenda os principais golpes digitais e saiba como se proteger antes que vire prejuízo.
+</p>
 
-  <p>
-    Se algo na internet te deixou desconfiado, eu te ajudo a entender antes que vire dor de cabeça ou prejuízo.
-  </p>
-
-  <a class="cta" href="https://wa.me/5517992603717" target="_blank">
-    Falar comigo agora no WhatsApp
-  </a>
+<a class="cta" href="https://wa.me/5517992603717" target="_blank">
+  Falar comigo agora no WhatsApp
+</a>
 
 </header>
 
 <section>
-  <h2>Em que posso te ajudar</h2>
+  <h2>Principais Golpes</h2>
   <div class="grid">
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Perfil falso">
-      <h3>Perfil falso ou suspeito</h3>
-      <p>Analiso redes sociais e comportamentos estranhos para você não cair em golpe emocional.</p>
+      <h3>Perfil Falso</h3>
+      <p>Golpistas criam identidade falsa para ganhar confiança e pedir dinheiro.</p>
     </div>
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Mensagem suspeita">
-      <h3>Mensagem estranha</h3>
-      <p>Links, pedidos de dinheiro e histórias urgentes. Eu te explico se é golpe ou não.</p>
+      <h3>WhatsApp Clonado</h3>
+      <p>Usam sua foto e nome para pedir transferências a familiares.</p>
     </div>
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Uso indevido de imagem">
-      <h3>Uso indevido de imagem</h3>
-      <p>Descubro onde suas fotos estão sendo usadas e organizo provas para denúncia.</p>
+      <h3>Falso Suporte</h3>
+      <p>Mensagens dizendo que sua conta foi bloqueada para roubar login e senha.</p>
     </div>
-  </div>
-</section>
-
-<section>
-  <h2>Como funciona (bem simples)</h2>
-  <ul class="steps">
-    <li>📩 Você me conta a situação e envia prints ou links</li>
-    <li>🔍 Analiso apenas informações públicas (100% legal)</li>
-    <li>🧠 Cruzo dados e explico tudo em linguagem simples</li>
-    <li>✅ Você decide o que fazer com mais segurança</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Transparência</h2>
-  <div class="alert">
-    <p><strong>Aviso importante:</strong></p>
-    <p>Não invado contas, não acesso mensagens privadas e não faço nada ilegal. Todo o trabalho é baseado apenas em informações públicas, com foco em prevenção e orientação.</p>
   </div>
 </section>
 
@@ -308,6 +220,18 @@
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5517992603717" target="_blank">WhatsApp</a>
+
+<!-- SCRIPT AUTOMÁTICO PARA DESTACAR PÁGINA ATIVA -->
+<script>
+  const links = document.querySelectorAll("nav a");
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+</script>
 
 </body>
 </html>
