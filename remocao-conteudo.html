@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>InsightTrace.Digital | Investigação de Golpes e Remoção de Conteúdo</title>
+<title>InsightTrace.Digital | Auditoria e Remoção de Conteúdo Online</title>
+<meta name="description" content="Serviço profissional de auditoria digital e solicitação de remoção de conteúdos que estejam prejudicando sua imagem na internet." />
 
-<meta name="description" content="Investigação de golpes online e serviço profissional de remoção de conteúdo prejudicial da internet. Atendimento seguro, humano e legal.">
-<meta name="keywords" content="golpe online, perfil falso, remover conteúdo da internet, reputação digital, investigação digital, remover nome do google">
-<meta name="author" content="InsightTrace.Digital">
-
-<link rel="canonical" href="https://seudominio.com/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="InsightTrace.Digital | Proteção Digital">
-<meta property="og:description" content="Ajuda profissional contra golpes online e remoção de conteúdo prejudicial.">
-<meta property="og:type" content="website">
-
-<!-- Fonte -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Ícones -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
@@ -41,8 +28,9 @@ background:linear-gradient(180deg,#f8fafc,#eef2ff);
 color:var(--text-main);
 }
 
+/* MENU */
 nav{
-background:#fff;
+background:#ffffff;
 padding:15px 30px;
 display:flex;
 justify-content:center;
@@ -59,9 +47,16 @@ color:var(--text-main);
 font-weight:600;
 }
 
-nav a:hover{color:var(--accent);}
+nav a:hover{
+color:var(--accent);
+}
 
-/* ÍCONES SOCIAIS FIXOS */
+/* PÁGINA ATIVA */
+nav a.active{
+color:var(--accent);
+}
+
+/* ÍCONES SOCIAIS */
 .social{
 position:fixed;
 top:20px;
@@ -172,6 +167,23 @@ margin-bottom:20px;
 .card h3{color:var(--accent);}
 .card p{color:var(--text-soft);}
 
+.steps{
+max-width:720px;
+margin:auto;
+font-size:1.05rem;
+}
+
+.steps li{margin-bottom:18px;}
+
+.alert{
+background:#ecfeff;
+border-left:6px solid var(--accent);
+padding:25px;
+border-radius:12px;
+max-width:790px;
+margin:auto;
+}
+
 footer{
 background:#e0e7ff;
 padding:45px 20px;
@@ -180,16 +192,10 @@ font-size:0.9rem;
 color:#1e293b;
 }
 
-footer strong {
-  color: var(--accent);
-  }
+footer strong{
+color:var(--accent);
+}
 
-.copyright {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  color: #475569;
-  }  
-  
 .whatsapp{
 position:fixed;
 right:20px;
@@ -210,10 +216,9 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 <nav>
 <a href="index.html">Início</a>
 <a href="golpes.html">Golpes Online</a>
-<a href="remocao-conteudo.html">Remoção de Conteúdo</a>
+<a href="remocao-conteudo.html" class="active">Remoção de Conteúdo</a>
 </nav>
 
-<!-- ÍCONES SOCIAIS -->
 <div class="social">
 <a href="https://instagram.com/insighttrace.digital" target="_blank">
 <i class="fa-brands fa-instagram"></i>
@@ -229,33 +234,50 @@ box-shadow:0 10px 25px rgba(0,0,0,0.25);
 </div>
 
 <p>
-Protegemos sua imagem e sua segurança digital com análise profissional de golpes online e remoção de conteúdos prejudiciais.
+Auditoria completa da sua presença digital e atuação profissional na solicitação de remoção de conteúdos que estejam prejudicando sua imagem.
 </p>
 
 <a class="cta" href="https://wa.me/5517992603717" target="_blank">
-Falar no WhatsApp
+Solicitar Análise no WhatsApp
 </a>
 </header>
 
 <section>
-<h2>Nossos Serviços</h2>
-
+<h2>Serviços Oferecidos</h2>
 <div class="grid">
-
 <div class="card">
-<i class="fa-solid fa-user-secret"></i>
-<h3>Investigação de Golpes</h3>
-<p>Análise de perfis falsos, mensagens suspeitas e situações duvidosas antes que você perca dinheiro ou sofra danos emocionais.</p>
-<a href="golpes.html" class="cta">Saiba Mais</a>
+<i class="fa-solid fa-magnifying-glass"></i>
+<h3>Auditoria Digital</h3>
+<p>Mapeamento completo de conteúdos públicos relacionados ao seu nome na internet.</p>
 </div>
-
+<div class="card">
+<i class="fa-solid fa-file-circle-exclamation"></i>
+<h3>Classificação de Risco</h3>
+<p>Análise técnica com base legal para identificar violações de imagem, dados ou reputação.</p>
+</div>
 <div class="card">
 <i class="fa-solid fa-shield-halved"></i>
-<h3>Remoção de Conteúdo</h3>
-<p>Auditoria completa e solicitação profissional de remoção ou desindexação de conteúdos prejudiciais na internet.</p>
-<a href="remocao-conteudo.html" class="cta">Saiba Mais</a>
+<h3>Solicitação de Remoção</h3>
+<p>Atuação formal junto às plataformas e mecanismos de busca para remoção ou desindexação.</p>
 </div>
+</div>
+</section>
 
+<section>
+<h2>Como Funciona</h2>
+<ul class="steps">
+<li>📩 Você envia seu nome e explica a situação</li>
+<li>🔍 Realizo auditoria em fontes públicas</li>
+<li>📄 Entrego relatório técnico detalhado</li>
+<li>⚖️ Realizo solicitações formais de remoção quando aplicável</li>
+</ul>
+</section>
+
+<section>
+<h2>Transparência e Legalidade</h2>
+<div class="alert">
+<p><strong>Aviso Importante:</strong></p>
+<p>Não invado contas, não acesso dados privados e não realizo nenhuma atividade ilegal. Todo o trabalho é baseado em informações públicas e fundamentado na legislação brasileira vigente.</p>
 </div>
 </section>
 
@@ -269,9 +291,9 @@ Falar no WhatsApp
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5517992603717" target="_blank">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/5517992603717" target="_blank">
+WhatsApp
+</a>
 
 </body>
 </html>
-
-
