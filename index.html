@@ -121,6 +121,17 @@ vertical-align:super;
 margin-left:6px;
 color:var(--accent);
 font-weight:700;
+opacity: 0;
+  transform: translateY(12px);
+  animation: digitalIn 1.1s ease forwards;
+  animation-delay: .4s;
+}
+
+@keyframes digitalIn {
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
 }
 
 header p{
@@ -283,5 +294,6 @@ Falar no WhatsApp
 
 </body>
 </html>
+
 
 
